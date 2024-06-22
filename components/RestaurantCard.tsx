@@ -10,7 +10,13 @@ export const RestaurantCard: React.FC<Restaurant> = (restaurant) => {
     <div className="w-full md:max-w-xs">
       <div className="relative aspect-[358/200] w-full md:w-[20rem]">
         <CustomImage
-          src={restaurant.images[0]}
+          src={
+            restaurant.images &&
+            Array.isArray(restaurant.images) &&
+            typeof restaurant.images[0] === "string"
+              ? restaurant.images[0]
+              : "/not-found.png"
+          }
           alt={restaurant.name}
           fill={true}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
