@@ -5,7 +5,7 @@ import { CustomImage } from "../ui/CustomImage";
 import Image from "next/image";
 import { TEXT_BY_STORE_CATEGORY } from "@/app/_constants";
 import { capitalizeFirstLetter } from "@/app/_helpers";
-import { Heart } from "../ui/Heart";
+import { HeartIcon } from "../ui/HeartIcon";
 import { trpc } from "@/utils/trpc";
 import Loading from "@/app/loading";
 export const RestaurantCard: React.FC<Restaurant> = (restaurant) => {
@@ -39,9 +39,9 @@ export const RestaurantCard: React.FC<Restaurant> = (restaurant) => {
           className="absolute right-2 top-2 z-10 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white-55 md:h-14 md:w-14"
           onClick={handleAddFavorite}
         >
-          <Heart
+          <HeartIcon
             className={`h-[26px] w-[26px] ${favoriteVal ? "fill-white" : "fill-none"} md:h-[28px] md:w-[28px]`}
-          ></Heart>
+          ></HeartIcon>
         </div>
         <CustomImage
           src={

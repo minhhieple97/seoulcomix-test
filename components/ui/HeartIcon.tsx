@@ -1,10 +1,10 @@
 import { twMerge } from "tailwind-merge";
 
-interface HeartProps {
+interface HeartIconProps {
   className?: string;
 }
 
-export const Heart: React.FC<HeartProps> = ({ className }) => {
+export const HeartIcon: React.FC<HeartIconProps> = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
