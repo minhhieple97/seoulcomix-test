@@ -8,7 +8,7 @@ interface SearchInputProps {
 export const SearchInput: React.FC<SearchInputProps> = ({ className }) => {
   return (
     <div
-      className={`lg:max-w-15rem flex w-full max-w-xs items-center overflow-hidden rounded-md border border-gray-300 bg-white shadow-md ${className ?? ""}`}
+      className={`lg:max-w-15rem flex w-full max-w-md items-center overflow-hidden rounded-md border border-gray-300 bg-white shadow-md ${className ?? ""}`}
     >
       <SearchIcon
         className={`ml-2 h-[22px] w-[22px] md:ml-3 md:h-[24px] md:w-[24px]`}
