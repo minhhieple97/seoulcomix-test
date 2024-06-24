@@ -4,13 +4,11 @@ import { UpdateFavoriteInput } from "./restaurant-schema";
 
 export const getRestaurants = async () => {
   try {
-    const restaurants = await prisma.restaurant.findMany();
-
+    const restaurants = await prisma.restaurant.findMany({
+    });
     return {
       status: "success",
-      data: {
-        restaurants,
-      },
+      restaurants,
     };
   } catch (err: any) {
     throw new TRPCError({
@@ -36,9 +34,7 @@ export const updateFavorite = async ({
     });
     return {
       status: "success",
-      data: {
-        restaurant,
-      },
+      restaurant,
     };
   } catch (err: any) {
     throw new TRPCError({
