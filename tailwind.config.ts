@@ -23,6 +23,7 @@ const config: Config = {
         },
         orange: "#FF692E",
         "white-55": "rgba(255, 255, 255, 0.55)",
+        menubar: "#667085",
       },
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1rem" }],

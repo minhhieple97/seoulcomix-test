@@ -3,6 +3,7 @@ import Hydrate from "@/utils/hydrate-client";
 import { createSSRHelper } from "./api/trpc/trpc-router";
 import { ListRestaurants } from "@/components/restaurant";
 import { SearchInput } from "@/components/restaurant/SearchInput";
+import { MenuBar } from "@/components/restaurant/MenuBar";
 
 export default async function Home() {
   const helpers = createSSRHelper();
@@ -15,6 +16,7 @@ export default async function Home() {
       >
         <SearchInput className="m-auto mb-6"></SearchInput>
         <ListRestaurants></ListRestaurants>
+        <MenuBar></MenuBar>
       </main>
     </Hydrate>
   );
