@@ -1,4 +1,4 @@
-import restaurantRoute from '@/server/restaurant-route';
+import { restaurantRoute } from '@/server/restaurant';
 import { t } from '@/utils/trpc-server';
 import { createServerSideHelpers } from '@trpc/react-query/server';
 import SuperJSON from 'superjson';
