@@ -41,6 +41,9 @@ importers:
       superjson:
         specifier: ^2.2.1
         version: 2.2.1
+      tailwind-merge:
+        specifier: ^2.3.0
+        version: 2.3.0
       zod:
         specifier: ^3.22.4
         version: 3.22.4
@@ -97,6 +100,10 @@ packages:
 
   '@babel/runtime@7.23.8':
     resolution: {integrity: sha512-Y7KbAP984rn1VGMbGqKmBLio9V7y5Je9GvU4rQPCPinCyNfUcToxIXl06d59URp/F3LwinvODxab5N/G6qggkw==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/runtime@7.24.7':
+    resolution: {integrity: sha512-UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==}
     engines: {node: '>=6.9.0'}
 
   '@eslint-community/eslint-utils@4.4.0':
@@ -1607,6 +1614,9 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  tailwind-merge@2.3.0:
+    resolution: {integrity: sha512-vkYrLpIP+lgR0tQCG6AP7zZXCTLc1Lnv/CCRT3BqJ9CZ3ui2++GPaGb1x/ILsINIMSYqqvrpqjUFsMNLlW99EA==}
+
   tailwindcss@3.4.1:
     resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}
     engines: {node: '>=14.0.0'}
@@ -1760,6 +1770,10 @@ snapshots:
   '@alloc/quick-lru@5.2.0': {}
 
   '@babel/runtime@7.23.8':
+    dependencies:
+      regenerator-runtime: 0.14.1
+
+  '@babel/runtime@7.24.7':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -3396,6 +3410,10 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  tailwind-merge@2.3.0:
+    dependencies:
+      '@babel/runtime': 7.24.7
 
   tailwindcss@3.4.1:
     dependencies:
