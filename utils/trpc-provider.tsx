@@ -29,10 +29,11 @@ export const TrpcProvider: React.FC<{ children: React.ReactNode }> = ({
               ...init,
               credentials: "include",
               headers: {
-                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Origin": url,
                 "Access-Control-Allow-Methods": "*",
                 "Access-Control-Allow-Headers": "*",
                 "Access-Control-Allow-Credentials": "true",
+                "Content-Type": "application/json",
               },
             });
           },
