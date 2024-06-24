@@ -1,7 +1,7 @@
 import { dehydrate } from "@tanstack/react-query";
 import Hydrate from "@/utils/hydrate-client";
 import { createSSRHelper } from "./api/trpc/trpc-router";
-import ListRestaurants from "@/components/ListRestaurants";
+import { ListRestaurants } from "@/components/restaurant";
 
 export default async function Home() {
   const helpers = createSSRHelper();
