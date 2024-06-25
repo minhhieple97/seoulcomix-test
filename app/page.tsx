@@ -2,7 +2,7 @@ import { dehydrate } from "@tanstack/react-query";
 import Hydrate from "@/utils/hydrate-client";
 import { createSSRHelper } from "./api/trpc/trpc-router";
 import { ListRestaurants } from "@/components/list-restaurants";
-import { SearchInput } from "@/components/list-restaurants/SearchInput";
+import { SearchInput } from "@/components/search-input/SearchInput";
 import { MenuBar } from "@/components/ui/components/MenuBar";
 
 export default async function Home() {
