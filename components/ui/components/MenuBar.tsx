@@ -1,9 +1,9 @@
 import React from "react";
-import { HomeIcon } from "../ui/HomeIcon";
-import { SearchIcon } from "../ui/SearchIcon";
-import { MessageIcon } from "../ui/MessageIcon";
-import { CaledarIcon } from "../ui/CalendarIcon";
-import { AlignIcon } from "../ui/AlignIcon";
+import { HomeIcon } from "../icon/HomeIcon";
+import { SearchIcon } from "../icon/SearchIcon";
+import { MessageIcon } from "../icon/MessageIcon";
+import { CaledarIcon } from "../icon/CalendarIcon";
+import { AlignIcon } from "../icon/AlignIcon";
 
 interface MenuItem {
   id: number;
@@ -55,7 +55,7 @@ export const MenuBar: React.FC = () => {
             className="flex cursor-pointer flex-col items-center justify-center gap-1 p-1"
           >
             {item.icon}
-            <a href={item.link} className="text-menubar block text-xs">
+            <a href={item.link} className="block text-xs text-menubar">
               {item.title}
             </a>
           </li>

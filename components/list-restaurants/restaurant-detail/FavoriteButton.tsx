@@ -1,5 +1,5 @@
 import React from "react";
-import { HeartIcon } from "../../ui/HeartIcon";
+import { HeartIcon } from "../../ui/icon/HeartIcon";
 
 interface FavoriteButtonProps {
   isFavorite: boolean;

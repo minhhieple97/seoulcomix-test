@@ -1,5 +1,5 @@
 import React from "react";
-import { SearchIcon } from "../ui/SearchIcon";
+import { SearchIcon } from "../ui/icon/SearchIcon";
 
 interface SearchInputProps {
   className?: string;

@@ -1,7 +1,7 @@
 "use client";
 import { Restaurant } from "@prisma/client";
 import React, { FC } from "react";
-import { CustomImage } from "../ui/CustomImage";
+import { CustomImage } from "../ui/components/CustomImage";
 import { getRestaurantImage } from "@/app/_helpers";
 import Loading from "@/app/loading";
 import { useFavoriteRestaurant } from "./hooks/useFavoriteRestaurant ";

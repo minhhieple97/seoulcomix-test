@@ -3,7 +3,7 @@ import Hydrate from "@/utils/hydrate-client";
 import { createSSRHelper } from "./api/trpc/trpc-router";
 import { ListRestaurants } from "@/components/list-restaurants";
 import { SearchInput } from "@/components/list-restaurants/SearchInput";
-import { MenuBar } from "@/components/list-restaurants/MenuBar";
+import { MenuBar } from "@/components/ui/components/MenuBar";
 
 export default async function Home() {
   const helpers = createSSRHelper();
