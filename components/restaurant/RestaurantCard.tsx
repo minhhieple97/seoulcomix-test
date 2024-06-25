@@ -1,54 +1,45 @@
 "use client";
 import { Restaurant } from "@prisma/client";
-import React, { useEffect, useState } from "react";
+import React, { FC } from "react";
 import { CustomImage } from "../ui/CustomImage";
 import Image from "next/image";
 import { TEXT_BY_STORE_CATEGORY } from "@/app/_constants";
-import { capitalizeFirstLetter } from "@/app/_helpers";
+import { capitalizeFirstLetter, getRestaurantImage } from "@/app/_helpers";
 import { HeartIcon } from "../ui/HeartIcon";
-import { trpc } from "@/utils/trpc";
 import Loading from "@/app/loading";
-export const RestaurantCard: React.FC<Restaurant> = (restaurant) => {
+import { useFavoriteRestaurant } from "./hooks/useFavoriteRestaurant ";
+export const RestaurantCard: FC<Restaurant> = (restaurant) => {
   const {
+    id,
     name,
     category,
     rating,
     ratingCount,
-    isFavorite,
     images,
     featured,
     city,
     desc,
     priceRange,
   } = restaurant;
-  const [favoriteVal, setFavoriteVal] = useState<boolean>(isFavorite);
-  const { mutate, isLoading } = trpc.updateFavorite.useMutation({
-    onSuccess: async (data) => {
-      const { restaurant } = data;
-      setFavoriteVal(restaurant.isFavorite);
-    },
-  });
-  const handleAddFavorite = () => {
-    mutate({ id: restaurant.id, favorite: !favoriteVal });
-  };
+  const { isFavoriteVal, toggleFavorite, isLoading } = useFavoriteRestaurant(
+    id,
+    restaurant.isFavorite,
+  );
+
   return (
     <div className="w-full md:max-w-xs">
       {isLoading && <Loading></Loading>}
       <div className="relative aspect-[358/200] w-full md:w-[20rem]">
         <div
           className="absolute right-2 top-2 z-10 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white-55 md:h-14 md:w-14"
-          onClick={handleAddFavorite}
+          onClick={toggleFavorite}
         >
           <HeartIcon
-            className={`h-[26px] w-[26px] ${favoriteVal ? "fill-white" : "fill-none"} md:h-[28px] md:w-[28px]`}
+            className={`h-[26px] w-[26px] ${isFavoriteVal ? "fill-white" : "fill-none"} md:h-[28px] md:w-[28px]`}
           ></HeartIcon>
         </div>
         <CustomImage
-          src={
-            images && Array.isArray(images) && typeof images[0] === "string"
-              ? images[0]
-              : "/not-found.png"
-          }
+          src={getRestaurantImage(images)}
           alt={name}
           fill={true}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
