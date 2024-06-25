@@ -16,9 +16,9 @@ export const AlignIcon: React.FC<HomeIconProps> = ({ className }) => {
       <path
         d="M1 7H19M1 1H19M1 13H19"
         stroke="#667085"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
