@@ -15,7 +15,7 @@ export default async function Home() {
         className="items-center md:flex md:flex-col md:gap-6"
       >
         <SearchInput className="m-auto mb-6"></SearchInput>
-        <ListRestaurants></ListRestaurants>
+        <ListRestaurants className="mb-12"></ListRestaurants>
         <MenuBar></MenuBar>
       </main>
     </Hydrate>
