@@ -1,16 +1,17 @@
 import { JsonValue } from "@prisma/client/runtime/library";
 import Image from "next/image";
 import React, { FC } from "react";
+import { useRestaurantCardContext } from "../context/RestaurantContext";
 
 interface RestaurantFeatureProps {
   className?: string;
-  featured?: JsonValue;
 }
 
 export const RestaurantFeature: FC<RestaurantFeatureProps> = ({
-  featured,
   className,
 }) => {
+  const { restaurant } = useRestaurantCardContext();
+  const featured = restaurant?.featured;
   return (
     <>
       {featured &&

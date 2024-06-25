@@ -1,5 +1,6 @@
 import React from "react";
 import { HeartIcon } from "../../ui/icon/HeartIcon";
+import { useRestaurantCardContext } from "../context/RestaurantContext";
 
 interface FavoriteButtonProps {
   isFavorite: boolean;
