@@ -16,6 +16,7 @@ Before you begin, ensure you have the following installed:
 
 - Node.js (v18 or newer)
 - npm (v6 or newer)
+- pnpm (v9 or newer)
 - PostgreSQL
 
 ### Installation
@@ -30,7 +31,8 @@ Before you begin, ensure you have the following installed:
 2. **Set up the database:**
 
    - Create a new PostgreSQL database.
-   - Copy `.env.example` to `.env` and update the `DATABASE_URL` with your database connection string.
+   - Copy `.env.example` to `.env` and update the `DATABASE_URL` with your database connection string follow this format: `DATABASE_URL="postgresql://<username>:<password>@<host>:<port>/<database-name>"`.
+   - Update NEXT_PUBLIC_VERCEL_URL in `.env` with your Vercel URL (in local development, use `localhost:3000`).
 
 3. **Install dependencies:**
 
@@ -48,7 +50,15 @@ Before you begin, ensure you have the following installed:
    npx prisma migrate dev
    ```
 
-5. **Start the backend server:**
+5. **Run the seed script:**
+
+   This command will execute the script defined in your package.json file to populate your database with initial data using Prisma.
+
+   ```bash
+   npm run prisma-seed
+   ```
+
+6. **Start the backend server:**
 
    If you're using Next.js with edge functions, run:
 
@@ -58,7 +68,7 @@ Before you begin, ensure you have the following installed:
 
    This will start the development server for both the frontend and the backend.
 
-6. **Visit the application:**
+7. **Visit the application:**
 
    Open your browser and go to `http://localhost:3000` to view the application.
 
