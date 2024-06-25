@@ -7,6 +7,7 @@ import { MenuBar } from "@/components/ui/components/MenuBar";
 
 export default async function Home() {
   const helpers = createSSRHelper();
+  await helpers.getRestaurants.prefetch();
   return (
     <Hydrate state={dehydrate(helpers.queryClient)}>
       <main
