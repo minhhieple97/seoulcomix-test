@@ -13,6 +13,7 @@ import { RestaurantDescription } from "./restaurant-detail/RestaurantDescription
 import { RestaurantLocation } from "./restaurant-detail/RestaurantLocation";
 import { RestaurantDetails } from "./restaurant-detail/RestaurantDetails";
 import RestaurantContext from "./context/RestaurantContext";
+import { SlideIcon } from "../ui/icon/SlideIcon";
 
 export const RestaurantCard: FC<Restaurant> = (restaurant) => {
   const { id, name, images, desc } = restaurant;
@@ -29,6 +30,7 @@ export const RestaurantCard: FC<Restaurant> = (restaurant) => {
           <FavoriteButton
             toggleFavorite={toggleFavorite}
             isFavorite={isFavoriteVal}
+            className="absolute right-2 top-2 z-10"
           ></FavoriteButton>
           <CustomImage
             src={getRestaurantImage(images)}
@@ -39,6 +41,7 @@ export const RestaurantCard: FC<Restaurant> = (restaurant) => {
             fallbackSrc="/not-found.png"
             priority={true}
           ></CustomImage>
+          <SlideIcon className="absolute bottom-0 left-1/2 top-[85%] -translate-x-1/2 transform md:hidden"></SlideIcon>
         </div>
         <div className="mt-2 w-full">
           <RestaurantFeature></RestaurantFeature>
