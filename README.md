@@ -1,6 +1,6 @@
 # Seoul Comix Restaurant App
 
-Welcome to the Seoul Comix Restaurant App, a simple web application that allows users to view a list of restaurants and mark them as favorites. This application is built using React and TypeScript for the frontend, and TRPC for the backend, with PostgreSQL as the database and Prisma ORM for database interactions.
+Welcome to the Seoul Comix Restaurant App, a simple web application that allows users to view a list of restaurants and mark them as favorites. This application is built using Next.js,React and TypeScript for the frontend, and TRPC for the backend, with PostgreSQL as the database and Prisma ORM for database interactions.
 
 ## Live Demo
 
