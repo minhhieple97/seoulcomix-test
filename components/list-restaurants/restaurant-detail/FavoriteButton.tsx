@@ -15,7 +15,7 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({
 }) => {
   return (
     <div
-      className={`absolute right-2 top-2 z-10 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white-55 md:h-14 md:w-14 ${className ?? ""}`}
+      className={`flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white-55 md:h-14 md:w-14 ${className ?? ""}`}
       onClick={toggleFavorite}
     >
       <HeartIcon
