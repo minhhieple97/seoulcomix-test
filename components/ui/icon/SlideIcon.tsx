@@ -32,7 +32,7 @@ export const SlideIcon: React.FC<SlideIconProps> = ({ className }) => {
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="4" />
           <feComposite
             in2="SourceAlpha"
