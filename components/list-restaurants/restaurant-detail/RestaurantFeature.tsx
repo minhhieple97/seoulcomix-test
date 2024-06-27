@@ -1,4 +1,3 @@
-import { JsonValue } from '@prisma/client/runtime/library';
 import Image from 'next/image';
 import React, { FC } from 'react';
 import { useRestaurantCardContext } from '../context/RestaurantContext';
