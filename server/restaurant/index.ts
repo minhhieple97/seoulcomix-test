@@ -1,1 +1,1 @@
-export * from './restaurant-route'
+export * from './restaurant-route';

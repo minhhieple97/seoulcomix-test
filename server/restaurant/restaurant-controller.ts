@@ -1,6 +1,6 @@
-import prisma from "@/prisma/prisma-client";
-import { TRPCError } from "@trpc/server";
-import { UpdateFavoriteInput } from "./restaurant-schema";
+import prisma from '@/prisma/prisma-client';
+import { TRPCError } from '@trpc/server';
+import { UpdateFavoriteInput } from './restaurant-schema';
 
 export const getRestaurants = async () => {
   try {
@@ -23,22 +23,18 @@ export const getRestaurants = async () => {
       select: fiedls,
     });
     return {
-      status: "success",
+      status: 'success',
       restaurants,
     };
   } catch (err: any) {
     throw new TRPCError({
-      code: "INTERNAL_SERVER_ERROR",
+      code: 'INTERNAL_SERVER_ERROR',
       message: err.message,
     });
   }
 };
 
-export const updateFavorite = async ({
-  input,
-}: {
-  input: UpdateFavoriteInput;
-}) => {
+export const updateFavorite = async ({ input }: { input: UpdateFavoriteInput }) => {
   try {
     const restaurant = await prisma.restaurant.update({
       where: {
@@ -49,7 +45,7 @@ export const updateFavorite = async ({
       },
     });
     return {
-      status: "success",
+      status: 'success',
       data: {
         id: restaurant.id,
         isFavorite: restaurant.isFavorite,
@@ -57,7 +53,7 @@ export const updateFavorite = async ({
     };
   } catch (err: any) {
     throw new TRPCError({
-      code: "INTERNAL_SERVER_ERROR",
+      code: 'INTERNAL_SERVER_ERROR',
       message: err.message,
     });
   }

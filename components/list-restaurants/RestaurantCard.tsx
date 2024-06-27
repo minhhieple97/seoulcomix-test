@@ -1,19 +1,19 @@
-"use client";
-import { Restaurant } from "@prisma/client";
-import React, { FC } from "react";
-import { CustomImage } from "../ui/components/CustomImage";
-import { getRestaurantImage } from "@/app/_helpers";
-import Loading from "@/app/loading";
-import { useFavoriteRestaurant } from "./hooks/useFavoriteRestaurant ";
-import FavoriteButton from "./restaurant-detail/FavoriteButton";
-import { RestaurantFeature } from "./restaurant-detail/RestaurantFeature";
-import { RestaurantName } from "./restaurant-detail/RestaurantName";
-import { RestaurantRating } from "./restaurant-detail/RestaurantRating";
-import { RestaurantDescription } from "./restaurant-detail/RestaurantDescription";
-import { RestaurantLocation } from "./restaurant-detail/RestaurantLocation";
-import { RestaurantDetails } from "./restaurant-detail/RestaurantDetails";
-import RestaurantContext from "./context/RestaurantContext";
-import { SlideIcon } from "../ui/icon/SlideIcon";
+'use client';
+import { Restaurant } from '@prisma/client';
+import React, { FC } from 'react';
+import { CustomImage } from '../ui/components/CustomImage';
+import { getRestaurantImage } from '@/app/_helpers';
+import Loading from '@/app/loading';
+import { useFavoriteRestaurant } from './hooks/useFavoriteRestaurant ';
+import FavoriteButton from './restaurant-detail/FavoriteButton';
+import { RestaurantFeature } from './restaurant-detail/RestaurantFeature';
+import { RestaurantName } from './restaurant-detail/RestaurantName';
+import { RestaurantRating } from './restaurant-detail/RestaurantRating';
+import { RestaurantDescription } from './restaurant-detail/RestaurantDescription';
+import { RestaurantLocation } from './restaurant-detail/RestaurantLocation';
+import { RestaurantDetails } from './restaurant-detail/RestaurantDetails';
+import RestaurantContext from './context/RestaurantContext';
+import { SlideIcon } from '../ui/icon/SlideIcon';
 
 export const RestaurantCard: FC<Restaurant> = (restaurant) => {
   const { id, name, images, desc } = restaurant;

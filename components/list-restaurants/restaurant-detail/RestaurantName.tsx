@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import { useRestaurantCardContext } from "../context/RestaurantContext";
+import React, { FC } from 'react';
+import { useRestaurantCardContext } from '../context/RestaurantContext';
 
 interface RestaurantNameProps {
   className?: string;

@@ -1,6 +1,6 @@
-"use client";
-import React from "react";
-import { useMediaQuery } from "react-responsive";
+'use client';
+import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 const Loading: React.FC = () => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
@@ -9,25 +9,25 @@ const Loading: React.FC = () => {
   return (
     <div
       style={{
-        position: "fixed",
+        position: 'fixed',
         top: 0,
         left: 0,
-        width: "100%",
-        height: "100%",
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-        backdropFilter: "blur(10px)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backdropFilter: 'blur(10px)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         zIndex: 9999,
       }}
     >
       <div role="status">
         <svg
-          width={isDesktop ? "3rem" : isMobile ? "2rem" : "2.5rem"}
-          height={isDesktop ? "3rem" : isMobile ? "2rem" : "2.5rem"}
+          width={isDesktop ? '3rem' : isMobile ? '2rem' : '2.5rem'}
+          height={isDesktop ? '3rem' : isMobile ? '2rem' : '2.5rem'}
           aria-hidden="true"
-          className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+          className="h-8 w-8 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

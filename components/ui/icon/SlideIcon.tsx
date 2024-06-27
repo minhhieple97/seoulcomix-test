@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import { twMerge } from 'tailwind-merge';
 
 interface SlideIconProps {
   className?: string;
@@ -12,7 +12,7 @@ export const SlideIcon: React.FC<SlideIconProps> = ({ className }) => {
       viewBox="0 0 52 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={twMerge("h-18 w-18", className)}
+      className={twMerge('h-18 w-18', className)}
     >
       <g filter="url(#filter0_b_167_10965)">
         <rect width="52" height="16" rx="8" fill="black" fillOpacity="0.45" />
@@ -34,11 +34,7 @@ export const SlideIcon: React.FC<SlideIconProps> = ({ className }) => {
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="4" />
-          <feComposite
-            in2="SourceAlpha"
-            operator="in"
-            result="effect1_backgroundBlur_167_10965"
-          />
+          <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_167_10965" />
           <feBlend
             mode="normal"
             in="SourceGraphic"

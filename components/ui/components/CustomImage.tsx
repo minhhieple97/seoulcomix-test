@@ -1,6 +1,6 @@
-import Image, { ImageProps } from "next/image";
-import React from "react";
-import { useState } from "react";
+import Image, { ImageProps } from 'next/image';
+import React from 'react';
+import { useState } from 'react';
 
 interface CustomImageProps extends ImageProps {
   fallbackSrc: string;

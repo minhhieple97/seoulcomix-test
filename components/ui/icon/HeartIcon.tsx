@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import { twMerge } from 'tailwind-merge';
 
 interface HeartIconProps {
   className?: string;
@@ -11,7 +11,7 @@ export const HeartIcon: React.FC<HeartIconProps> = ({ className }) => {
       viewBox="0 0 24 24"
       strokeWidth="2.5"
       stroke="white"
-      className={twMerge("h-20 w-20", className)}
+      className={twMerge('h-20 w-20', className)}
     >
       <path
         strokeLinecap="round"

@@ -1,6 +1,6 @@
-import React from "react";
-import { HeartIcon } from "../../ui/icon/HeartIcon";
-import { useRestaurantCardContext } from "../context/RestaurantContext";
+import React from 'react';
+import { HeartIcon } from '../../ui/icon/HeartIcon';
+import { useRestaurantCardContext } from '../context/RestaurantContext';
 
 interface FavoriteButtonProps {
   isFavorite: boolean;
@@ -15,11 +15,11 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({
 }) => {
   return (
     <div
-      className={`flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white-55 md:h-14 md:w-14 ${className ?? ""}`}
+      className={`flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white-55 md:h-14 md:w-14 ${className ?? ''}`}
       onClick={toggleFavorite}
     >
       <HeartIcon
-        className={`h-[26px] w-[26px] ${isFavorite ? "fill-white" : "fill-none"} md:h-[28px] md:w-[28px]`}
+        className={`h-[26px] w-[26px] ${isFavorite ? 'fill-white' : 'fill-none'} md:h-[28px] md:w-[28px]`}
       ></HeartIcon>
     </div>
   );

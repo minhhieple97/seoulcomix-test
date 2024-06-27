@@ -1,6 +1,6 @@
-import React, { FC } from "react";
-import Image from "next/image";
-import { useRestaurantCardContext } from "../context/RestaurantContext";
+import React, { FC } from 'react';
+import Image from 'next/image';
+import { useRestaurantCardContext } from '../context/RestaurantContext';
 
 interface RestaurantRatingProps {
   className?: string;
@@ -11,7 +11,7 @@ export const RestaurantRating: FC<RestaurantRatingProps> = ({ className }) => {
   const rating = restaurant?.rating;
   const ratingCount = restaurant?.ratingCount;
   return (
-    <div className={`flex ${className ?? ""}`}>
+    <div className={`flex ${className ?? ''}`}>
       <Image
         src={`/stars-01.svg`}
         width={15}

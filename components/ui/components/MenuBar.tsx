@@ -1,9 +1,9 @@
-import React from "react";
-import { HomeIcon } from "../icon/HomeIcon";
-import { SearchIcon } from "../icon/SearchIcon";
-import { MessageIcon } from "../icon/MessageIcon";
-import { CaledarIcon } from "../icon/CalendarIcon";
-import { AlignIcon } from "../icon/AlignIcon";
+import React from 'react';
+import { HomeIcon } from '../icon/HomeIcon';
+import { SearchIcon } from '../icon/SearchIcon';
+import { MessageIcon } from '../icon/MessageIcon';
+import { CaledarIcon } from '../icon/CalendarIcon';
+import { AlignIcon } from '../icon/AlignIcon';
 
 interface MenuItem {
   id: number;
@@ -15,32 +15,32 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
   {
     id: 1,
-    title: "홈",
-    link: "/",
+    title: '홈',
+    link: '/',
     icon: <HomeIcon className="h-[26px] w-[26px]" />,
   },
   {
     id: 2,
-    title: "검색",
-    link: "/about",
+    title: '검색',
+    link: '/about',
     icon: <SearchIcon className="h-[26px] w-[26px]" />,
   },
   {
     id: 3,
-    title: "피드",
-    link: "/services",
+    title: '피드',
+    link: '/services',
     icon: <MessageIcon className="h-[26px] w-[26px]" />,
   },
   {
     id: 4,
-    title: "내 예약",
-    link: "/contact",
+    title: '내 예약',
+    link: '/contact',
     icon: <CaledarIcon className="h-[26px] w-[26px]" />,
   },
   {
     id: 5,
-    title: "메뉴",
-    link: "/contact",
+    title: '메뉴',
+    link: '/contact',
     icon: <AlignIcon className="h-[26px] w-[26px]" />,
   },
 ];

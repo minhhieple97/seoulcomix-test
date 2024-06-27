@@ -1,10 +1,7 @@
-import { trpc } from "@/utils/trpc";
-import { useState } from "react";
+import { trpc } from '@/utils/trpc';
+import { useState } from 'react';
 
-export const useFavoriteRestaurant = (
-  restaurantId: string,
-  initialIsFavorite: boolean,
-) => {
+export const useFavoriteRestaurant = (restaurantId: string, initialIsFavorite: boolean) => {
   const [isFavoriteVal, setIsFavoriteVal] = useState(initialIsFavorite);
   const { mutate, isLoading } = trpc.updateFavorite.useMutation({
     onSuccess: (resp) => {

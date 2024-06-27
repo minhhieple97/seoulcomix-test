@@ -6,5 +6,5 @@ export const restaurantRoute = t.router({
   updateFavorite: t.procedure
     .input(updateFavoriteSchema)
     .mutation(({ input }) => updateFavorite({ input })),
-getRestaurants: t.procedure.query(() => getRestaurants()),
+  getRestaurants: t.procedure.query(() => getRestaurants()),
 });
