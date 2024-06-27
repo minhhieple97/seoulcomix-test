@@ -7,8 +7,8 @@ export const useFavoriteRestaurant = (
 ) => {
   const [isFavoriteVal, setIsFavoriteVal] = useState(initialIsFavorite);
   const { mutate, isLoading } = trpc.updateFavorite.useMutation({
-    onSuccess: (data) => {
-      setIsFavoriteVal(data.restaurant.isFavorite);
+    onSuccess: (resp) => {
+      setIsFavoriteVal(resp.data.isFavorite);
     },
   });
 
